@@ -1,0 +1,72 @@
+
+
+@import url('../component/card.css');
+@import url('../component/btn.css');
+
+
+
+
+
+
+
+.service { padding-block-start: calc(var(--section-padding) + 60px); }
+
+.service-list {
+  display: grid;
+  gap: 25px;
+}
+
+.card-title { margin-block-end: 10px; }
+
+.card ion-icon { font-size: 3.2rem; }
+
+.card .body-sm { color: var(--jet); }
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+  .service-list { grid-template-columns: 1fr 1fr; }
+
+}
+
+.btn {
+  background-color: var(--orange-red);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  max-width: max-content;
+  letter-spacing: 2px;
+  padding: 10px 22px;
+  box-shadow: 6px 6px 0 -1px var(--shadow-color, var(--jet));
+  transition: var(--transition-1);
+}
+
+.btn:is(:hover, :focus-visible) {
+  background-color: var(--hover-bg, var(--jet));
+  box-shadow: 5px 5px 0 -2px var(--hover-shadow-color, var(--orange-red));
+}
+
+.btn-primary,
+.btn-secondary { color: var(--white); }
+
+.btn-secondary {
+  background-color: var(--jet);
+  --shadow-color: var(--orange-red);
+  --hover-bg: var(--orange-red);
+  --hover-shadow-color: var(--jet);
+}
+
+.btn-tertiary {
+  color: var(--jet);
+  background-color: var(--maximum-yellow-red);
+  --shadow-color: var(--orange-red);
+  --hover-bg: var(--orange-red);
+  --hover-shadow-color: var(--maximum-yellow-red);
+}
+
+.btn-tertiary:is(:hover, :focus-visible) { color: var(--white); }
